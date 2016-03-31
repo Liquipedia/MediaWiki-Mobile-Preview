@@ -1,5 +1,5 @@
-LiquiFlow
-=========
+MediaWiki MobilePreview
+=======================
 
 MediaWiki Extension for Liquipedia, provides an option to preview how the content looks on mobile.
 
