@@ -16,7 +16,14 @@ class MobilePreviewHooks {
 		global $wgRequest;
 		$wpMobilePreviewWidth = $wgRequest->getInt('wpMobilePreviewWidth');
 		$tabindex++;
-		$buttons['mobile_preview'] = '<input id="wpMobilePreviewWidth" name="wpMobilePreviewWidth" tabindex="' . $tabindex . '" title="' . wfMessage('previewwidthinpxtitle') . '" value="' . (($wpMobilePreviewWidth != 0)?$wpMobilePreviewWidth:'') . '" placeholder="' . wfMessage('previewwidthinpx') . '" type="text">';
+		$buttonsTemp = array_merge(Array(), $buttons);
+		$buttonsTemp['mobile_preview'] = '<input id="wpMobilePreviewWidth" name="wpMobilePreviewWidth" tabindex="' . $tabindex . '" title="' . wfMessage('previewwidthinpxtitle') . '" value="' . (($wpMobilePreviewWidth != 0)?$wpMobilePreviewWidth:'') . '" placeholder="' . wfMessage('previewwidthinpx') . '" type="text">';
+		$buttons = Array();
+		$buttons['mobile_preview'] = str_replace('tabindex="9"', 'tabindex="6"', $buttonsTemp['mobile_preview']);
+		$buttons['preview'] = $buttonsTemp['preview'];
+		$buttons['live'] = $buttonsTemp['live'];
+		$buttons['diff'] = $buttonsTemp['diff'] . '<br />';
+		$buttons['save'] = str_replace('tabindex="6"', 'tabindex="9"', $buttonsTemp['save']);
 		return true;
 	}
 }
