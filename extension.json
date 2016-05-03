@@ -8,9 +8,9 @@
 	"descriptionmsg": "Allows to have a second preview button that shows the look of the content on mobile.",
 	"license-name": "MIT",
 	"type": "parserhook",
-        "requires": {
-                "MediaWiki": ">= 1.25.0"
-        },
+	"requires": {
+		"MediaWiki": ">= 1.25.0"
+	},
 	"AutoloadClasses": {
 		"MobilePreviewHooks": "MobilePreviewHooks.php"
 	},

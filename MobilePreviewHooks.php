@@ -1,7 +1,7 @@
 <?php
 
 class MobilePreviewHooks {
-        public static function onOutputPageBeforeHTML( OutputPage &$out, &$text ) {
+	public static function onOutputPageBeforeHTML( OutputPage &$out, &$text ) {
 		global $wgRequest;
 		$wpMobilePreviewWidth = $wgRequest->getInt('wpMobilePreviewWidth');
 		
@@ -9,8 +9,8 @@ class MobilePreviewHooks {
 			$text = '<div class="wiki-bordercolor-light" style="border-width:1px;border-style:solid;padding:10px;max-width:' . $wpMobilePreviewWidth . 'px;width:100%;margin:0px auto;">' . $text . '</div>';
 		}
 		
-                return true;
-        }
+		return true;
+	}
 	
 	public static function onEditPageBeforeEditButtons( &$editpage, &$buttons, &$tabindex ) {
 		global $wgRequest;
@@ -27,6 +27,5 @@ class MobilePreviewHooks {
 		return true;
 	}
 }
-
 
 ?>

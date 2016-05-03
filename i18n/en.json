@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-                        "FO-nTTaX"
-                ]
+			"FO-nTTaX"
+		]
 	},
 	"previewwidthinpx": "Preview width in px...",
 	"previewwidthinpxtitle": "Define the width for the preview, please use this before saving!"
